@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+go generate ./...
+go fmt dict.go
