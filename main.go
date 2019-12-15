@@ -19,7 +19,7 @@ const (
 	package dict
 	
 	
-	var DictionaryBytes = []byte{ {{ range .DictBytes -}} 0x{{.}}, {{- end }} }
+	var DictionaryBytes = []byte{ {{ range .DictBytes -}} 0x{{printf "%X" .}}, {{- end }} }
 	var DictionaryString = []string{ {{ range .DictString -}} {{ printf "%q" .}}, {{- end }} }
 	var DictionaryBytesWords = [][]byte{ {{ range .DictString -}} []byte({{ printf "%q" .}}), {{- end }} } 
 	
